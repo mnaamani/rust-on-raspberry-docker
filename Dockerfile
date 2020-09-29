@@ -21,7 +21,7 @@ ENV URL_GIT_PI_TOOLS=https://github.com/raspberrypi/tools.git \
     TOOLCHAIN_32=$HOME/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
 
 # install rustup with raspberry target
-RUN sh /tmp/build/download-rust.sh
+RUN sh /tmp/build/download-rust.sh && sh /tmp/build/add-wasm-build-tools.sh
 
 COPY bin/gcc-sysroot $HOME/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/gcc-sysroot
 COPY bin/gcc-sysroot $HOME/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin/gcc-sysroot
