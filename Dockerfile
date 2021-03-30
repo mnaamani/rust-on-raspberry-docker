@@ -5,7 +5,7 @@ ARG RUST_VERSION=stable
 
 # update system
 RUN apt-get update && \
-  apt-get install -y curl git gcc xz-utils sudo pkg-config unzip clang libc6-dev-i386
+  apt-get install -y curl git gcc xz-utils sudo pkg-config unzip clang llvm libc6-dev
 
 
 # config and set variables
